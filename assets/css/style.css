@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Tajawal", sans-serif;
+}
+
+body {
+    height: 10vh;
+    background: radial-gradient(circle farthest-corner at -3.1% -4.3%,
+            rgba(57, 255, 186, 1) 0%,
+            rgba(21, 38, 82, 1) 90%);
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.myColor {
+    background-image: linear-gradient(to right, #f83600 50%, #f9d423 150%);
+}
+
+.myShadow {
+    box-shadow: 0 5px 10px #111;
+}
+
+.myBtn {
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    border: none;
+    transition: all 300ms;
+
+}
+
+.myBtn:hover {
+    transform: scale(1.1);
+}
+
+.myHr {
+    height: 2px;
+    border-radius: 50px;
+}
+
+.myLinkBtn {
+    border-radius: 100px;
+    width: 70%;
+    border: 2px solid #fff;
+}
+
+@media(max-width:720px) {
+    .wrapper {
+        margin: 2px;
+    }
+}
