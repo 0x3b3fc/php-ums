@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['user'])) {
+    header('location:home.php');
+}
+?>
+
 <!-- include header -->
 <?php include 'assets/includes/header.php'; ?>
 <!-- Login Form Start -->

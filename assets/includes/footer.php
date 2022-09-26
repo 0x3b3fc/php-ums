@@ -47,6 +47,28 @@
                 }
             }
         });
+
+        //login ajax request
+        $('#login-btn').click(function(e) {
+            if ($('#login-form')[0].checkValidity()) {
+                e.preventDefault();
+
+                $('#login-btn').val('...جاري التسجيل');
+                $.ajax({
+                    url: 'assets/includes/action.php',
+                    method: 'post',
+                    data: $('#login-form').serialize() + '&action=login',
+                    success: function(response) {
+                        $('#login-btn').val('تسجيل الدخول');
+                        if ($.trim(response) == 'login') {
+                            window.location = 'home.php';
+                        } else {
+                            $('#loginAlert').html(response);
+                        }
+                    }
+                });
+            }
+        });
     });
 </script>
 </body>
